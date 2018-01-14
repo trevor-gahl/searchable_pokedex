@@ -59,7 +59,7 @@ def searchByType(search_type):
 ############################
 
 def searchByName(name):
-    # initializes preliminary dataframes and constants
+    # initializes dataframes and constants in the desired scope
     global pokemon_ds, pokemontypes_ds, pokemonName, height, weight, baseExperience
 
     # searches through the pokemon dataframe for a specific name
