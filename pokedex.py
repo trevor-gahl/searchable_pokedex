@@ -18,9 +18,9 @@ typeDictSearch = {'normal': 1, 'fighting': 2, 'flying': 3, 'poison': 4, 'ground'
 
 # import csv files with pokemon data
 pokemon_ds = pd.read_csv(
-    "C:/Users/Trevor/Documents/Ryans_Challenges/Pokedex/Pokemon.csv")
+    "Pokemon.csv")
 pokemontypes_ds = pd.read_csv(
-    "C:/Users/Trevor/Documents/Ryans_Challenges/Pokedex/PokemonTypes.csv")
+    "PokemonTypes.csv")
 
 ############################
 ## Search by Pokemon type ##
