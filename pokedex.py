@@ -99,19 +99,28 @@ def searchByName(name):
 
 def main():
     # basic keyboard menu to select search options
-    selection = int(
-        input("How would you like to search? (1=Name or 2=Type)\n"))
-    if(selection == 1):
-        name = input(
-            "What name would you like to search for? (Enter as lowercase)\n")
-        searchByName(name)
-    elif(selection == 2):
-        print("\nSearchable options: normal, fighting, flying, poison, ground, rock, bug, ghost, steel, fire, water, grass, electric, psychic, ice, dragon, dark, fairy")
-        search_type_str = input("What type would you like to search for?\n")
-        search_type_int = typeDictSearch[search_type_str]
-        searchByType(search_type_int)
-    else:
-        print("Invalid selection")
+    menu = True
+    while(menu == True):
+        try:
+            selection = int(
+                input("\nHow would you like to search? (1=Name or 2=Type 3=Quit)\n"))
+        except:
+            selection = 99
+        if(selection == 1):
+            name = input(
+                "What name would you like to search for?\n")
+            name = name.lower()
+            searchByName(name)
+        elif(selection == 2):
+            print("\nSearchable options: normal, fighting, flying, poison, ground, rock, bug, ghost, steel, fire, water, grass, electric, psychic, ice, dragon, dark, fairy")
+            search_type_str = input(
+                "What type would you like to search for?\n")
+            search_type_int = typeDictSearch[search_type_str]
+            searchByType(search_type_int)
+        elif(selection == 3):
+            menu = False
+        else:
+            print("Invalid selection")
 
 
 if __name__ == '__main__':
